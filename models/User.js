@@ -15,12 +15,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    
+
     confirm_password: {
         type: String,
         require: true,
     },
-   
+
     role: {
         type: String,
         default: 'User',
@@ -28,9 +28,12 @@ const UserSchema = new mongoose.Schema({
     image: {
         public_id: {
             type: String,
+            require: true,
         },
+
         url: {
             type: String,
+            require: true,
         },
     },
 },

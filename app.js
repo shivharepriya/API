@@ -20,6 +20,7 @@ app.use(fileUpload({useTempFiles:true}));
 
 //for get data in api
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 
 

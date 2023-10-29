@@ -5,7 +5,7 @@ const router = express.Router()
 
 // UserController
 router.get('/getalluser', UserController.getAllUser)
-router.get('/userinsert', UserController.userInsert)
+router.post('/userinsert', UserController.userInsert)
 
 
 

@@ -35,7 +35,7 @@ class UserController {
                 .status(401)
                 .json({ status: "failed", message: "This email is already exits" });
         } else {
-            if (name && email && password && confirmpassword) {
+            if (name && email && password && confirm_password) {
                 if (password == confirm_password) {
                     try {
                         const hashpassword = await bcrypt.hash(password, 10);
