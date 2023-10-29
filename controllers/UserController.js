@@ -14,7 +14,14 @@ class UserController {
 
     static getAllUser = async (req, res) => {
         try {
-            res.send('hello user')
+            const users = await UserModel.find()
+            //console.log(user)
+            res.status(201).json({
+                status:'success',
+                message:'successfull',
+                users,
+            })
+            //res.send('hello user')
         }
         catch (error) {
             console.log(error)
